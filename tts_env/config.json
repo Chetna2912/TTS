@@ -1,0 +1,37 @@
+
+config_data = """
+{
+    "model": {
+        "name": "tts_models/multilingual/multi-dataset/your_language",
+        "checkpoint": null,
+        "num_speakers": 1,
+        "tts_checkpoint": null,
+        "tts_model": null,
+        "generator_model": "glow_tts"
+    },
+    "audio": {
+        "sample_rate": 22050,
+        "win_length": 1024,
+        "hop_length": 256,
+        "num_mels": 80,
+        "mel_fmin": 0,
+        "mel_fmax": 8000,
+        "ref_level_db": 20,
+        "min_level_db": -100
+    },
+    "train": {
+        "batch_size": 32,
+        "eval_interval": 1000,
+        "save_interval": 10000,
+        "epochs": 100,
+        "learning_rate": 0.0001,
+        "scheduler": "noam",
+        "warmup_steps": 4000
+    },
+    "dataset": {
+        "path": "common_voice_dataset",
+        "language": "hi",
+        "phoneme_language": "hi"
+    }
+}
+"""
